@@ -1,0 +1,169 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  height: 100%;
+}
+
+.activate-modal {
+  background-color: $main-button-idle;
+  color: black;
+  padding: 1em 2em;
+  align-items: center;
+  border: 1px solid $button-idle;
+
+  &:hover {
+    background-color: $main-button-active;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $modal-background;
+
+  &__container {
+    background-color: $modal;
+    margin-top: 30vh;
+    height: 100%;
+    overflow: hidden;
+    animation: modalactive;
+    animation-duration: 1s;
+  }
+
+  &__main {
+    padding: 2em;
+    height: 45%;
+
+    &__header {
+      display: inline-flex;
+  
+      &--hero img {
+        height: 20px;
+        width: 20px;
+      }
+      &--title {
+        padding-left: 10px;
+        line-height: 2em;
+        h2 {
+          margin: 0;
+          font-size: 22px;
+          font-weight: bold;
+        }
+      }
+    }
+    &__message {
+      margin: 2em 0;
+      p {
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 1.5em;
+      }
+    }
+  }
+  
+  &__select {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+
+    &--btn {
+      background-color: $button-idle;
+      color: $button-active;
+      padding: 1em 2em;
+      border: 0;
+      border-radius: 3px;
+      align-items: center;
+      border: 1px solid $button-idle;
+      margin: .5em 0;
+     
+      
+      h2 {
+        font-size: 22px;
+          font-weight: bold;
+          font-style: italic;
+      }
+    
+      &:hover {
+        background-color: $button-active;
+        color: $button-idle;
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@keyframes modalactive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: $tablet-break) {
+  .modal {
+    &__container {
+      margin: 8em;
+      height: 60%;
+    }
+
+    &__main {
+      padding: 4em;
+      height: 60%;
+
+      &__header {
+
+        &--hero img {
+          height: 25px;
+          width: 25px;
+        }
+        &--title {
+          padding-left: 20px;
+          line-height: 2em;
+          h2 {
+            margin: 0;
+            font-size: 30px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &__select {
+      flex-direction: row;
+      justify-content: center;
+      
+
+      &--btn {
+        padding: 0;
+        width: 30%;
+        height: 50px;
+        margin: .5em;
+      }
+    }
+  }
+}
+
+
+
