@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Jet2 Modal</title>
+</head>
+<body>
+
+  <button data-behavior="modalButton" class="activate-modal">Click here</button>
+  
+    <div data-behavior="modalView" class="modal">
+      <div class="modal__container">
+        
+        <div class="modal__main">
+          <div class="modal__main__header">
+            <div class="modal__main__header--hero">
+              <img src="imgs/tick-hero.jpg" alt="">
+            </div>
+              <div class="modal__main__header--title">
+                <h2>Congratulations your jet2 holiday booking has been confirmed</h2>
+              </div>
+          </div>
+          
+          <div class="modal__main__message">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod viverra nisl, non pulvinar augue interdum nec. Pellentesque cursus diam ac ornare aliquet. Nulla auctor, tellus sed suscipit bibendum, justo ligula sagittis velit, eget rhoncus urna urna sed nibh. Cras eu ante non turpis efficitur mattis sed in metus. </p>
+          </div>
+        </div>
+        
+        <hr class="modal__divider">
+
+        <div class="modal__select">
+          <button data-behavior="closeBtn" class="modal__select--btn"><h2>Cancel</h2></button>
+          <button data-behavior="continueBtn" class="modal__select--btn"><h2>Continue</h2></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

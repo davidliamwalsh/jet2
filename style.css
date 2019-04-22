@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none; }
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  height: 100%; }
+
+.activate-modal {
+  background-color: #2A7DE9;
+  color: black;
+  padding: 1em 2em;
+  align-items: center;
+  border: 1px solid #1f3240; }
+  .activate-modal:hover {
+    background-color: #0A8C0A;
+    cursor: pointer; }
+  .activate-modal:focus {
+    outline: none; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #636F79; }
+  .modal__container {
+    background-color: #F2F2F2;
+    margin-top: 30vh;
+    height: 100%;
+    overflow: hidden;
+    animation: modalactive;
+    animation-duration: 1s; }
+  .modal__main {
+    padding: 2em;
+    height: 35%; }
+    .modal__main__header {
+      display: inline-flex; }
+      .modal__main__header--hero img {
+        height: 20px;
+        width: 20px; }
+      .modal__main__header--title {
+        padding-left: 10px;
+        line-height: 2em; }
+        .modal__main__header--title h2 {
+          margin: 0;
+          font-size: 22px;
+          font-weight: bold; }
+    .modal__main__message {
+      margin: 1em 0; }
+      .modal__main__message p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: #929292; }
+  .modal__divider {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #636F79;
+    padding: 0; }
+  .modal__select {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em; }
+    .modal__select--btn {
+      background-color: #1f3240;
+      color: #fff;
+      padding: 1em 2em;
+      border: 0;
+      border-radius: 3px;
+      align-items: center;
+      border: 2px solid #1f3240;
+      margin: .5em 0; }
+      .modal__select--btn h2 {
+        font-size: 22px;
+        font-weight: bold;
+        font-style: italic; }
+      .modal__select--btn:hover {
+        background-color: #fff;
+        color: #636F79;
+        border: 2px solid #636F79;
+        cursor: pointer; }
+      .modal__select--btn:focus {
+        outline: none; }
+
+@keyframes modalactive {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@media screen and (min-width: 740px) {
+  .modal__container {
+    margin: 6em 4em;
+    height: 65%; }
+  .modal__main {
+    padding: 4em 2em;
+    height: 45%; }
+    .modal__main__header--hero img {
+      height: 25px;
+      width: 25px; }
+    .modal__main__header--title {
+      padding-left: 20px; }
+      .modal__main__header--title h2 {
+        font-size: 30px; }
+  .modal__select {
+    flex-direction: row;
+    justify-content: center; }
+    .modal__select--btn {
+      padding: 0;
+      width: 30%;
+      height: 50px;
+      margin: .5em; } }
+@media screen and (min-width: 1020px) {
+  .modal__container {
+    margin: 8em;
+    height: 60%; }
+  .modal__main {
+    height: 35%; } }
+
+/*# sourceMappingURL=style.css.map */
