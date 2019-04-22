@@ -50,7 +50,7 @@ body {
 
   &__main {
     padding: 2em;
-    height: 45%;
+    height: 35%;
 
     &__header {
       display: inline-flex;
@@ -70,13 +70,21 @@ body {
       }
     }
     &__message {
-      margin: 2em 0;
+      margin: 1em 0;
       p {
-        font-size: 16px;
-        font-weight: 200;
+        font-size: 14px;
+        font-weight: 300;
         line-height: 1.5em;
+        color: $light-font;
       }
     }
+  }
+
+  &__divider {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid $dark-font;
+    padding: 0;
   }
   
   &__select {
@@ -91,19 +99,20 @@ body {
       border: 0;
       border-radius: 3px;
       align-items: center;
-      border: 1px solid $button-idle;
+      border: 2px solid $button-idle;
       margin: .5em 0;
      
       
       h2 {
         font-size: 22px;
-          font-weight: bold;
-          font-style: italic;
+        font-weight: bold;
+        font-style: italic;
       }
     
       &:hover {
         background-color: $button-active;
-        color: $button-idle;
+        color: $dark-font;
+        border: 2px solid $dark-font;
         cursor: pointer;
       }
       &:focus {
@@ -125,13 +134,13 @@ body {
 @media screen and (min-width: $tablet-break) {
   .modal {
     &__container {
-      margin: 8em;
-      height: 60%;
+      margin: 6em 4em;
+      height: 65%;
     }
 
     &__main {
-      padding: 4em;
-      height: 60%;
+      padding: 4em 2em;
+      height: 45%;
 
       &__header {
 
@@ -141,11 +150,8 @@ body {
         }
         &--title {
           padding-left: 20px;
-          line-height: 2em;
           h2 {
-            margin: 0;
             font-size: 30px;
-            font-weight: bold;
           }
         }
       }
@@ -154,7 +160,6 @@ body {
       flex-direction: row;
       justify-content: center;
       
-
       &--btn {
         padding: 0;
         width: 30%;
@@ -165,5 +170,15 @@ body {
   }
 }
 
+@media screen and (min-width: $desktop-break) {
+  .modal {
+    &__container {
+      margin: 8em;
+      height: 60%;
+    }
 
-
+    &__main {
+      height: 35%;
+    }
+  }
+}

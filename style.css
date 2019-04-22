@@ -39,7 +39,7 @@ body {
     animation-duration: 1s; }
   .modal__main {
     padding: 2em;
-    height: 45%; }
+    height: 35%; }
     .modal__main__header {
       display: inline-flex; }
       .modal__main__header--hero img {
@@ -53,11 +53,17 @@ body {
           font-size: 22px;
           font-weight: bold; }
     .modal__main__message {
-      margin: 2em 0; }
+      margin: 1em 0; }
       .modal__main__message p {
-        font-size: 16px;
-        font-weight: 200;
-        line-height: 1.5em; }
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5em;
+        color: #929292; }
+  .modal__divider {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #636F79;
+    padding: 0; }
   .modal__select {
     display: flex;
     flex-direction: column;
@@ -69,7 +75,7 @@ body {
       border: 0;
       border-radius: 3px;
       align-items: center;
-      border: 1px solid #1f3240;
+      border: 2px solid #1f3240;
       margin: .5em 0; }
       .modal__select--btn h2 {
         font-size: 22px;
@@ -77,7 +83,8 @@ body {
         font-style: italic; }
       .modal__select--btn:hover {
         background-color: #fff;
-        color: #1f3240;
+        color: #636F79;
+        border: 2px solid #636F79;
         cursor: pointer; }
       .modal__select--btn:focus {
         outline: none; }
@@ -87,23 +94,20 @@ body {
     opacity: 0; }
   to {
     opacity: 1; } }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 740px) {
   .modal__container {
-    margin: 8em;
-    height: 60%; }
+    margin: 6em 4em;
+    height: 65%; }
   .modal__main {
-    padding: 4em;
-    height: 60%; }
+    padding: 4em 2em;
+    height: 45%; }
     .modal__main__header--hero img {
       height: 25px;
       width: 25px; }
     .modal__main__header--title {
-      padding-left: 20px;
-      line-height: 2em; }
+      padding-left: 20px; }
       .modal__main__header--title h2 {
-        margin: 0;
-        font-size: 30px;
-        font-weight: bold; }
+        font-size: 30px; }
   .modal__select {
     flex-direction: row;
     justify-content: center; }
@@ -112,5 +116,11 @@ body {
       width: 30%;
       height: 50px;
       margin: .5em; } }
+@media screen and (min-width: 1020px) {
+  .modal__container {
+    margin: 8em;
+    height: 60%; }
+  .modal__main {
+    height: 35%; } }
 
 /*# sourceMappingURL=style.css.map */
